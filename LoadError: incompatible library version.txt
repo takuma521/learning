@@ -1,0 +1,23 @@
+# LoadError: incompatible library version -
+
+railsが起動しない
+
+```
+bin/rails s
+
+rake aborted!
+LoadError: incompatible library version -
+```
+
+## 原因
+ライブラリーの互換性がない？
+
+## 解消法
+
+`vendor/bundle/`以下を削除し`bundle install`をし直す。
+
+```
+sudo rm -rf vendor/bundle/ruby
+
+bundle install
+```
